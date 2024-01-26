@@ -24,6 +24,7 @@ CHECKLIST.txt
 *.njsproj
 *.sln
 *.sw?
+*.timestamp*
 
 #Notes
 NOTES.txt
