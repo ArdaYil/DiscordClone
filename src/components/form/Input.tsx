@@ -1,4 +1,4 @@
-import { HTMLInputTypeAttribute, ReactNode } from "react";
+import { ReactNode } from "react";
 
 type InputType = "TEXT" | "PASSWORD";
 

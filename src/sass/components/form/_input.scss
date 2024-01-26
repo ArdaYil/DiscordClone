@@ -24,10 +24,12 @@
     border-radius: u.em(5);
     padding: u.em(10) u.em(12);
     background-color: var(--clr-dark-200);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
 .input-field {
-    width: calc(100% - u.em(40));
     border: none;
     outline: none;
     font-size: u.rem(18);
@@ -39,4 +41,8 @@
     display: flex;
     flex-direction: column;
     gap: u.em(20);
+}
+
+.input-icon-btn {
+    cursor: pointer;
 }
