@@ -20,6 +20,7 @@ a {
     font-size: u.rem(16);
     font-weight: 400;
     font-family: var(--font-family);
+    color: var(--clr-blue);
 
     &:hover {
         text-decoration: none;
