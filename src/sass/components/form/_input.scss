@@ -1,0 +1,42 @@
+@use "../../util" as u;
+
+.text-input {
+    width: 100%;
+}
+
+.input-title {
+    color: var(--clr-text-secondary);
+    margin-bottom: u.em(5);
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: u.rem(15);
+}
+
+.input-required {
+    margin-left: u.em(10);
+    margin-top: u.em(5);
+    color: var(--clr-danger);
+    font-size: u.rem(10);
+    position: absolute;
+}
+
+.input-field-container {
+    border-radius: u.em(5);
+    padding: u.em(10) u.em(12);
+    background-color: var(--clr-dark-200);
+}
+
+.input-field {
+    width: calc(100% - u.em(40));
+    border: none;
+    outline: none;
+    font-size: u.rem(18);
+    background: transparent;
+    color: var(--clr-text-primary);
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: u.em(20);
+}
