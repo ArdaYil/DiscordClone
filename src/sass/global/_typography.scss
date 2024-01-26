@@ -1,0 +1,27 @@
+@use "../util" as u;
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700;800&display=swap');
+
+:root {
+    --font-family: "Open Sans";
+}
+
+body {
+    font-family: var(--font-family);
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    font-size: u.rem(16);
+    font-weight: 400;
+}
+
+a {
+    text-decoration: none;
+    font-size: u.rem(16);
+    font-weight: 400;
+    font-family: var(--font-family);
+
+    &:hover {
+        text-decoration: none;
+    }
+}
