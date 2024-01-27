@@ -3,12 +3,16 @@ import Layout from "./Layout";
 import Homepage from "../pages/Homepage";
 import PrivateRoutes from "./PrivateRoutes";
 import Login from "../pages/Login";
+import Register from "../pages/Register";
 
 const browserRouter = createBrowserRouter([
   {
     path: "/",
     element: <Layout />,
-    children: [{ path: "login", element: <Login /> }],
+    children: [
+      { path: "login", element: <Login /> },
+      { path: "register", element: <Register /> },
+    ],
   },
   {
     element: <PrivateRoutes />,
