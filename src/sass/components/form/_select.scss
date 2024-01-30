@@ -1,0 +1,62 @@
+@use "../../util" as u;
+
+.select-holder {
+    position: relative;
+}
+
+.select {
+    background-color: var(--clr-dark-200);
+    color: var(--clr-text-secondary);
+    padding: u.em(5) u.em(10);
+    border: none;
+    border-radius: u.em(5);
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.dropdown-list-wrapper {
+    position: absolute;
+    background-color: var(--clr-dark-200);
+    color: var(--clr-text-secondary);
+    width: 100%;
+    bottom: u.em(33);
+    height: u.em(200);
+    padding-top: u.em(10);
+    padding-right: u.em(5);
+    border-top-right-radius: u.em(10);
+    border-top-left-radius: u.em(10);
+}
+
+.dropdown-list {
+    overflow-y: scroll;
+    height: 100%;
+
+    &::-webkit-scrollbar {
+        width: u.em(5);
+        height: u.em(100);
+    }
+    
+    /* Handle */
+    &::-webkit-scrollbar-thumb {
+        background: #888;
+        border-radius: u.em(20);
+    }
+    
+    /* Handle on hover */
+    &::-webkit-scrollbar-thumb:hover {
+        background: #555;
+    }
+}
+
+.option {
+    padding: u.em(10);
+    padding-left: u.em(15);
+    cursor: pointer;
+
+    &:hover {
+        background-color: var(--clr-dark-100);
+    }
+}
