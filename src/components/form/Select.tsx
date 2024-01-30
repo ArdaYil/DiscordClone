@@ -7,12 +7,11 @@ export type Value = string | number;
 interface Props {
   name: string;
   list: Array<Value>;
-  initialValue: Value;
+  value: Value;
   onSelect: (value: Value) => void;
 }
 
-const Select = ({ list, initialValue, onSelect, ...rest }: Props) => {
-  const [value, setValue] = useState<Value>();
+const Select = ({ list, value, onSelect, ...rest }: Props) => {
   const [expanded, setExpanded] = useState<boolean>(false);
   const selectElementRef = useRef<HTMLDivElement>(null);
 
@@ -21,7 +20,6 @@ const Select = ({ list, initialValue, onSelect, ...rest }: Props) => {
   };
 
   const handleSelect = (value: string) => {
-    setValue(value);
     onSelect(value);
   };
 
@@ -50,7 +48,7 @@ const Select = ({ list, initialValue, onSelect, ...rest }: Props) => {
   return (
     <div className="select-holder" {...rest}>
       <div ref={selectElementRef} onClick={toggleExpanded} className="select">
-        <p className="value-display">{value || initialValue}</p>
+        <p className="value-display">{value}</p>
         <FaAngleDown />
       </div>
       {expanded && (
