@@ -1,7 +1,63 @@
+@use "../../util" as u;
 
+.btn-container {
+    position: relative;
+
+    &:hover {
+        .btn-tool-tip {
+            display: initial;
+        }
+    }
+}
 
 .btn {
     cursor: pointer;
     outline: none;
     border: none;
+
+    &.disabled {
+        filter: brightness(0.7);
+        cursor: no-drop;
+    }
+}
+
+.btn-tool-tip {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, calc(-100% - u.em(10)));
+    padding: u.em(10) u.em(15);
+    border-radius: u.em(10);
+    background-color: #000;
+    color: var(--clr-text-primary);
+    text-align: left;
+    width: 40%;
+    font-size: u.rem(12);
+    font-weight: 600;
+    line-height: 1.3;
+    user-select: none;
+
+    &:hover {
+        .btn-tool-tip {
+            display: none;
+        }
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: -10px; 
+        left: 50%;
+        transform: translateX(-50%) rotate(180deg);
+        border-style: solid;
+        border-width: 0 5px 10px 5px;
+        border-color: transparent transparent #000 transparent;
+
+        &:hover {
+            .btn-tool-tip {
+                display: none;
+            }
+        }
+      }
 }
