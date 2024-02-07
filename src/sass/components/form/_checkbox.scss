@@ -1,0 +1,50 @@
+@use "../../util" as u;
+
+.checkbox-container {
+    display: grid;
+    height: u.em(25);
+    grid-template-columns: u.em(25) auto;
+    gap: u.em(10);
+    cursor: pointer;
+    align-items: center;
+}
+
+.checkbox {
+    width: u.em(25);
+    height: u.em(25);
+    border: u.em(1) solid var(--clr-text-secondary);
+    border-radius: u.em(5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &.checked {
+        background-color: var(--clr-primary);
+
+        .checkbox-check {
+            display: initial;
+        }
+        
+    }
+}
+
+.checkbox-check {
+    display: none;
+}
+
+.checkbox-label {
+    font-size: u.rem(12);
+    color: var(--clr-text-secondary);
+}
+
+.checkbox-label a {
+    font-size: u.rem(12) !important;
+}
+
+.login-link {
+    font-size: u.rem(13);
+}
+
+.newsletter {
+    margin-bottom: u.em(10);
+}
