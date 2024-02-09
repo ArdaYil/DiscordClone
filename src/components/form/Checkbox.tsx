@@ -32,15 +32,14 @@ const Checkbox: React.FC<Props> = ({ id, children, className = "" }: Props) => {
       return child;
     });
 
-  const getClickProp = () => {
-    return typeof children === "string" ? { onClick: toggleChecked } : {};
+  const getClickProp = (value: boolean) => {
+    const result = typeof children === "string";
+    return result === value ? { onClick: toggleChecked } : {};
   };
 
-  console.log(getClickProp());
-
   return (
-    <div className={`checkbox-container ${className}`} {...getClickProp()}>
-      <div className={checkboxClassName} id={id}>
+    <div className={`checkbox-container ${className}`} {...getClickProp(true)}>
+      <div {...getClickProp(false)} className={checkboxClassName} id={id}>
         <FaCheck className="checkbox-check" size={17} color="#f5f5f5" />
       </div>
       <p style={{ userSelect: "none" }} className="checkbox-label">
