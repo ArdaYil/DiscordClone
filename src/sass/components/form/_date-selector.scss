@@ -1,0 +1,9 @@
+@use "../../util" as u;
+
+.date-selector-title {
+    color: var(--clr-text-secondary);
+    margin-bottom: u.em(5);
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: u.rem(15);
+}
