@@ -1,19 +1,31 @@
 import React from "react";
 import { ReactNode, useState } from "react";
 import { FaCheck } from "react-icons/fa6";
+import { FormChangeEvent } from "./Form";
 
 interface Props {
   id: string;
+  name: string;
+  onChange: (e: FormChangeEvent) => void;
   children: string | ReactNode;
   className?: string;
 }
 
-const Checkbox: React.FC<Props> = ({ id, children, className = "" }: Props) => {
+const Checkbox: React.FC<Props> = ({
+  id,
+  name,
+  onChange,
+  children,
+  className = "",
+}: Props) => {
   const [isChecked, setIsChecked] = useState<boolean>(false);
 
   const toggleChecked = () => {
-    console.log("check");
-    setIsChecked(!isChecked);
+    const newValue = !isChecked;
+    setIsChecked(newValue);
+    onChange({
+      target: { name: name, value: "", type: "checkbox", checked: newValue },
+    } as FormChangeEvent);
   };
 
   const checkboxClassName = `checkbox ${isChecked ? "checked" : ""}`;
