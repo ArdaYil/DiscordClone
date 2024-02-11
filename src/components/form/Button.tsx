@@ -10,10 +10,11 @@ interface Props {
 }
 
 const Button = ({ className, children, enabled, toolTip, ...rest }: Props) => {
-  const newClassName = `btn ${className} ${!enabled ? "disabled" : ""}`;
+  const newClassName = `btn ${className}`;
+  const containerClassName = `btn-container ${!enabled ? "disabled" : ""}`;
 
   return (
-    <div className="btn-container">
+    <div className={containerClassName}>
       <button className={newClassName} {...rest}>
         {children}
       </button>

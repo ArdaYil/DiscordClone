@@ -3,9 +3,16 @@
 .btn-container {
     position: relative;
 
-    &:hover {
-        .btn-tool-tip {
-            display: initial;
+    &.disabled {
+        & .btn {
+            filter: brightness(0.7);
+            cursor: no-drop;
+        }
+
+        &:hover {
+            .btn-tool-tip {
+                display: initial;
+            }
         }
     }
 }
@@ -14,11 +21,6 @@
     cursor: pointer;
     outline: none;
     border: none;
-
-    &.disabled {
-        filter: brightness(0.7);
-        cursor: no-drop;
-    }
 }
 
 .btn-tool-tip {
