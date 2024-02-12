@@ -1,5 +1,3 @@
-import { useState } from "react";
-
 interface Props {
   className?: string;
   type: "submit" | "reset" | "button";

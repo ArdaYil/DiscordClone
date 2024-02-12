@@ -1,13 +1,23 @@
 import { Link } from "react-router-dom";
-import Form from "../components/form/Form";
+import Form, { FormChangeEvent } from "../components/form/Form";
 import Input from "../components/form/Input";
 import InputGroup from "../components/form/InputGroup";
 import PasswordInput from "../components/form/PasswordInput";
-import { useEffect, useRef } from "react";
+import { useState } from "react";
 import Button from "../components/form/Button";
 
 const Login = () => {
-  const handleLogin = () => {};
+  const [email, setEmail] = useState<string>("");
+  const [password, setPassword] = useState<string>("");
+
+  const handleEmailChange = (e: FormChangeEvent) => setEmail(e.target.value);
+  const handlePasswordChange = (e: FormChangeEvent) =>
+    setPassword(e.target.value);
+
+  const handleLogin = () => {
+    console.log("Email: " + email);
+    console.log("Password " + password);
+  };
 
   return (
     <div className="login-wrapper">
@@ -18,15 +28,19 @@ const Login = () => {
             We're so excited to see you again!
           </h2>
           <InputGroup>
-            <Input title="Email or phone number" />
+            <Input
+              name="email"
+              onChange={handleEmailChange}
+              title="Email or phone number"
+            />
             <div>
-              <PasswordInput />
+              <PasswordInput name="password" onChange={handlePasswordChange} />
               <Link className="login-link" to="#">
                 Forgot password?
               </Link>
             </div>
             <div>
-              <Button onClick={handleLogin} className="login-btn" type="submit">
+              <Button className="login-btn" type="submit">
                 Log in
               </Button>
               <footer className="login-form-register">
