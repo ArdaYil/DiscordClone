@@ -1,0 +1,29 @@
+@use "../util" as u;
+
+.register-heading {
+    margin-bottom: u.em(15);
+    font-size: u.em(22) !important;
+}
+
+.form-container-register {
+    width: 100%;
+    padding: u.em(30);
+    max-width: u.em(500);
+    background-color: var(--clr-dark);
+    border-radius: u.em(5);
+    padding-bottom: u.em(40);
+}
+
+.register-birthdate .select-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: u.em(10);
+}
+
+.register-input-title, .register-input-field {
+    font-size: u.rem(13) !important;
+}
+
+.register-birthdate .date-selector-title {
+    font-size: u.rem(13) !important;
+}
