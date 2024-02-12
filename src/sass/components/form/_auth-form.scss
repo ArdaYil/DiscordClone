@@ -1,0 +1,58 @@
+@use "../../util" as u;
+
+%auth-heading-style {
+    color: var(--clr-text-primary);
+    font-size: u.rem(24);
+    font-weight: 600;
+    margin-bottom: u.em(3);
+}
+
+%auth-subheading-style {
+    color: var(--clr-text-secondary);
+    font-size: u.rem(16);
+}
+
+.auth-wrapper {
+    background-image: url("/src/assets/images/loginBackground.png");
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.auth-form {
+    margin-inline: u.em(10);
+}
+
+.auth-form-container {
+    width: 100%;
+    padding: u.em(30);
+    background-color: var(--clr-dark);
+    border-radius: u.em(5);
+    padding-bottom: u.em(40);
+}
+
+.auth-heading, .auth-subheading {
+    text-align: center;
+}
+
+.auth-heading {
+    @extend %auth-heading-style;
+}
+
+.auth-subheading {
+    @extend %auth-subheading-style;
+    margin-bottom: u.em(30);
+}
+
+.submit-btn {
+    width: 100%;
+    background-color: var(--clr-primary);
+    font-size: u.rem(16);
+    color: var(--clr-text-primary);
+    padding-block: u.em(10);
+    font-weight: 600;
+    margin-bottom: u.em(8);
+}

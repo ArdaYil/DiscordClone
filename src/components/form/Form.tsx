@@ -10,6 +10,7 @@ export type FormChangeEvent = ChangeEvent<HTMLInputElement>;
 
 const Form = ({ children, className, onSubmit }: Props) => {
   const componentClass = className + " form";
+
   const submit = (e: FormEvent) => {
     e.preventDefault();
     onSubmit();

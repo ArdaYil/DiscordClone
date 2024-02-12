@@ -20,11 +20,11 @@ const Login = () => {
   };
 
   return (
-    <div className="login-wrapper">
-      <div className="form-container">
-        <Form className="login-form" onSubmit={handleLogin}>
-          <h1 className="form-heading">Welcome back!</h1>
-          <h2 className="form-subheading">
+    <div className="auth-wrapper">
+      <div className="auth-form-container login-container">
+        <Form className="auth-form" onSubmit={handleLogin}>
+          <h1 className="auth-heading">Welcome back!</h1>
+          <h2 className="auth-subheading">
             We're so excited to see you again!
           </h2>
           <InputGroup>
@@ -40,7 +40,7 @@ const Login = () => {
               </Link>
             </div>
             <div>
-              <Button className="login-btn" type="submit">
+              <Button className="submit-btn" type="submit">
                 Log in
               </Button>
               <footer className="login-form-register">

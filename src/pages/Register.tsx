@@ -49,10 +49,10 @@ const Register = () => {
   };
 
   return (
-    <div className="login-wrapper">
-      <div className="form-container-register">
-        <Form className="login-form" onSubmit={handleRegister}>
-          <h1 className="form-heading register-heading">Create an account</h1>
+    <div className="auth-wrapper">
+      <div className="auth-form-container register-container">
+        <Form className="auth-form" onSubmit={handleRegister}>
+          <h1 className="auth-heading register-heading">Create an account</h1>
           <InputGroup>
             <Input
               onChange={handleInputChange}
@@ -99,7 +99,7 @@ const Register = () => {
             </Checkbox>
             <Button
               toolTip="You have to approve our terms of use to continue"
-              className="login-btn"
+              className="submit-btn"
               type="submit"
               enabled={registerStore.termsOfService}
             >

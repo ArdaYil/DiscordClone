@@ -5,19 +5,8 @@
     font-size: u.em(22) !important;
 }
 
-.form-container-register {
-    width: 100%;
-    padding: u.em(30);
+.register-container {
     max-width: u.em(500);
-    background-color: var(--clr-dark);
-    border-radius: u.em(5);
-    padding-bottom: u.em(40);
-}
-
-.register-birthdate .select-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: u.em(10);
 }
 
 .register-input-title, .register-input-field {

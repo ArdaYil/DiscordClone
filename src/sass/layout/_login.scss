@@ -1,45 +1,23 @@
 @use "../util" as u;
+@import "../components/form/auth-form";
 
-.login-wrapper {
-    background-image: url("/src/assets/images/loginBackground.png");
-    background-size: cover;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.form-container {
-    width: 100%;
-    padding: u.em(30);
+.login-container {
     max-width: u.em(800);
-    background-color: var(--clr-dark);
     display: grid;
     grid-template-columns: 2fr 1fr;
-    border-radius: u.em(5);
     gap: u.em(30);
-    padding-bottom: u.em(40);
 }
 
-.form-heading, .form-subheading, .qr-heading, .qr-text {
+.qr-text {
     text-align: center;
 }
 
-.form-heading, .qr-heading {
-    color: var(--clr-text-primary);
-    font-size: u.rem(24);
-    font-weight: 600;
-    margin-bottom: u.em(3);
+.qr-heading {
+    @extend %auth-heading-style;
 }
 
 .form-subheading, .qr-text {
-    color: var(--clr-text-secondary);
-    font-size: u.rem(16);
-}
-
-.form-subheading {
-    margin-bottom: u.em(30);
+    @extend %auth-subheading-style;
 }
 
 .qr-container {
@@ -60,10 +38,6 @@
     margin-bottom: u.em(30);
 }
 
-.login-form {
-    margin-inline: u.em(10);
-}
-
 .login-form-register {
     display: flex;
     flex-direction: row;
@@ -72,16 +46,6 @@
 
 .register-link {
     font-size: u.rem(13);
-}
-
-.login-btn {
-    width: 100%;
-    background-color: var(--clr-primary);
-    font-size: u.rem(16);
-    color: var(--clr-text-primary);
-    padding-block: u.em(10);
-    font-weight: 600;
-    margin-bottom: u.em(8);
 }
 
 .register-text {
