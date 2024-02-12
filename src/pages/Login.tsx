@@ -31,7 +31,7 @@ const Login = () => {
               </Button>
               <footer className="login-form-register">
                 <p className="register-text">Need an account?</p>
-                <Link className="login-link" to="/register">
+                <Link className="register-link" to="/register">
                   Register
                 </Link>
               </footer>

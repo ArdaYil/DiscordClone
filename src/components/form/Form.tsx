@@ -1,10 +1,12 @@
-import { FormEvent, ReactNode } from "react";
+import { ChangeEvent, FormEvent, ReactNode } from "react";
 
 interface Props {
   children: ReactNode;
   className?: string;
   onSubmit: () => void;
 }
+
+export type FormChangeEvent = ChangeEvent<HTMLInputElement>;
 
 const Form = ({ children, className, onSubmit }: Props) => {
   const componentClass = className + " form";

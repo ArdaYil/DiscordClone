@@ -27,3 +27,11 @@ p, h1, h2, h3, h4, h5, h6 {
 #root, #__next {
     isolation: isolate;
 }
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active{
+    -webkit-text-fill-color: var(--clr-text-primary);
+    box-shadow: inset 0 0 20px 20px var(--clr-dark-200);
+}
