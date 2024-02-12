@@ -24,8 +24,9 @@
     border-radius: u.em(5);
     padding: u.em(12) u.em(14);
     background-color: var(--clr-dark-200);
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: 1fr u.em(25);
+    gap: u.em(10);
     justify-content: space-between;
 }
 
@@ -45,4 +46,13 @@
 
 .input-icon-btn {
     cursor: pointer;
+}
+
+.error {
+    color: var(--clr-danger--light);
+}
+
+.input-error {
+    font-size: u.rem(11);
+    text-transform: capitalize;
 }
