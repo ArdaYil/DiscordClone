@@ -1,5 +1,11 @@
 @use "../../util" as u;
 
+.date-selector .select-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: u.em(10);
+}
+
 .date-selector-title {
     color: var(--clr-text-secondary);
     margin-bottom: u.em(5);
