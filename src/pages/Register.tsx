@@ -99,7 +99,6 @@ const Register = () => {
             </Checkbox>
             <Button
               toolTip="You have to approve our terms of use to continue"
-              onClick={handleRegister}
               className="login-btn"
               type="submit"
               enabled={registerStore.termsOfService}

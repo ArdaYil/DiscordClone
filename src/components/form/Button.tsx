@@ -2,14 +2,19 @@ import { useState } from "react";
 
 interface Props {
   className?: string;
-  onClick: () => void;
   type: "submit" | "reset" | "button";
   children: string;
-  enabled: boolean;
-  toolTip: string;
+  enabled?: boolean;
+  toolTip?: string;
 }
 
-const Button = ({ className, children, enabled, toolTip, ...rest }: Props) => {
+const Button = ({
+  className,
+  children,
+  enabled = true,
+  toolTip,
+  ...rest
+}: Props) => {
   const newClassName = `btn ${className}`;
   const containerClassName = `btn-container ${!enabled ? "disabled" : ""}`;
 
