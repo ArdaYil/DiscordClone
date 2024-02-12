@@ -6,7 +6,7 @@ interface UserStore {
 }
 
 const useUserStore = create<UserStore>((set) => ({
-  user: null,
+  user: {},
 }));
 
 export default useUserStore;

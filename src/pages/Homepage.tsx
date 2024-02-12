@@ -1,5 +1,11 @@
+import Sidebar from "../components/pages/homepage/Sidebar";
+
 function Homepage() {
-  return <h1>Hello World!</h1>;
+  return (
+    <div>
+      <Sidebar />
+    </div>
+  );
 }
 
 export default Homepage;

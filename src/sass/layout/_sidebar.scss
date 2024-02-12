@@ -1,0 +1,36 @@
+@use "../util" as u;
+
+.sidebar {
+    max-width: u.em(70);
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    flex-direction: column;
+    padding-block: u.em(10);
+    gap: u.em(10);
+    height: 100vh;
+    background-color: var(--clr-dark-300);
+
+    &__item {
+        background-color: var(--clr-dark);
+        padding: u.em(10);
+        border-radius: u.em(20);
+        cursor: pointer;
+
+        & svg {
+            $size: 30;
+
+            width: u.em($size);
+            height: u.em($size);
+        }
+
+        &.direct-messages {
+            background-color: var(--clr-primary);
+        }
+    }
+
+    &__header {
+        padding-bottom: u.em(10);
+        border-bottom: u.em(2) solid var(--clr-dark);
+    }
+}
